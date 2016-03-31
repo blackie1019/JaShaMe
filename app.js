@@ -2,7 +2,6 @@ var express = require('express'),
 	logger = require('morgan');
 
 var app = express();
-app.use(logger);
 
 app.get('/', function(request, response) {
   response.send('Hello World!');
