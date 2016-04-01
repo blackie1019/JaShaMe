@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JaShaMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IJD-YG-tMs"/>
+                        <viewControllerLayoutGuide type="bottom" id="q73-Bn-9jy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JaShaMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FL-cz-1ET">
+                                <rect key="frame" x="101" y="92" width="118" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="0GQ-dT-q7N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDY-bK-Ij4">
+                                <rect key="frame" x="128" y="398" width="65" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ig2-62-GIO"/>
+                                    <constraint firstAttribute="width" constant="65" id="QZj-Yu-iEU"/>
+                                </constraints>
+                                <state key="normal" title="自訂座標"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K05-b5-Rnl">
+                                <rect key="frame" x="110" y="333" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="S5d-Wt-1SZ"/>
+                                    <constraint firstAttribute="width" constant="100" id="bwc-ar-q5f"/>
+                                </constraints>
+                                <state key="normal" title="使用現在位置"/>
+                                <connections>
+                                    <action selector="showProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XmE-9y-d9U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4FL-cz-1ET" secondAttribute="trailing" constant="85" id="2no-9Q-Peq"/>
+                            <constraint firstItem="q73-Bn-9jy" firstAttribute="top" secondItem="WDY-bK-Ij4" secondAttribute="bottom" constant="135" id="Lwt-zC-R9T"/>
+                            <constraint firstItem="K05-b5-Rnl" firstAttribute="centerX" secondItem="WDY-bK-Ij4" secondAttribute="centerX" id="Reh-m9-axA"/>
+                            <constraint firstItem="4FL-cz-1ET" firstAttribute="top" secondItem="IJD-YG-tMs" secondAttribute="bottom" constant="72" id="b9O-kt-802"/>
+                            <constraint firstItem="4FL-cz-1ET" firstAttribute="top" secondItem="IJD-YG-tMs" secondAttribute="bottom" constant="72" id="de4-XT-Ljo"/>
+                            <constraint firstItem="WDY-bK-Ij4" firstAttribute="top" secondItem="K05-b5-Rnl" secondAttribute="bottom" constant="25" id="i55-b5-Qan"/>
+                            <constraint firstItem="4FL-cz-1ET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="qFz-TE-yKI"/>
+                            <constraint firstItem="WDY-bK-Ij4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJe-AL-A05"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="321"/>
+        </scene>
+        <!--Random Restaurant-->
+        <scene sceneID="aRR-hO-Fbv">
+            <objects>
+                <viewController storyboardIdentifier="RandomRestaurant" id="Uxd-Zl-y3x" customClass="RandomRestaurant" customModule="JaShaMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2zr-tu-B4I"/>
+                        <viewControllerLayoutGuide type="bottom" id="S4f-4Z-5JX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OyZ-dK-PWa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oFH-54-JRJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vsh-qJ-kPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="321"/>
+        </scene>
+    </scenes>
+</document>
