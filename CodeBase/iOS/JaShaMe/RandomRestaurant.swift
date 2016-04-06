@@ -10,7 +10,16 @@ import UIKit
 
 class RandomRestaurant: UIViewController {
     
+    @IBOutlet weak var labelLatitude: UILabel!
+    @IBOutlet weak var labelLongitude: UILabel!
+    
+    var Latitude = String()
+    var Longitude = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        labelLatitude.text = Latitude
+        labelLongitude.text = Longitude
     }
 }

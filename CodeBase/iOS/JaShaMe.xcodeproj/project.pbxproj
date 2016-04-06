@@ -7,30 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38657C2B3A43C6CE760D0385 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7279A2EA280317D7215460 /* Pods.framework */; };
 		E7B4D30D1CAD81D400452DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4D30C1CAD81D400452DD6 /* AppDelegate.swift */; };
 		E7B4D30F1CAD81D400452DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4D30E1CAD81D400452DD6 /* ViewController.swift */; };
 		E7B4D3121CAD81D400452DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B4D3101CAD81D400452DD6 /* Main.storyboard */; };
 		E7B4D3151CAD81D400452DD6 /* JaShaMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7B4D3131CAD81D400452DD6 /* JaShaMe.xcdatamodeld */; };
 		E7B4D3171CAD81D400452DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B4D3161CAD81D400452DD6 /* Assets.xcassets */; };
 		E7B4D31A1CAD81D400452DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B4D3181CAD81D400452DD6 /* LaunchScreen.storyboard */; };
-		E7B4D3251CAD8BFE00452DD6 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4D3241CAD8BFE00452DD6 /* ProgressView.swift */; };
 		E7B4D3291CAD918F00452DD6 /* RandomRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4D3281CAD918F00452DD6 /* RandomRestaurant.swift */; };
+		E7E9D2D91CB42DFF00898797 /* HTTPTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E9D2D81CB42DFF00898797 /* HTTPTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11A4A0A1B88A48974DFD7A0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4F7279A2EA280317D7215460 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3137A0FB58ABB6F40EC76E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E7B4D3091CAD81D400452DD6 /* JaShaMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JaShaMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B4D30C1CAD81D400452DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7B4D30E1CAD81D400452DD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7B4D30E1CAD81D400452DD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E7B4D3111CAD81D400452DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7B4D3141CAD81D400452DD6 /* JaShaMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JaShaMe.xcdatamodel; sourceTree = "<group>"; };
 		E7B4D3161CAD81D400452DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7B4D3191CAD81D400452DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7B4D31B1CAD81D400452DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7B4D3211CAD854E00452DD6 /* JaShaMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JaShaMe-Bridging-Header.h"; sourceTree = "<group>"; };
-		E7B4D3241CAD8BFE00452DD6 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		E7B4D3281CAD918F00452DD6 /* RandomRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomRestaurant.swift; sourceTree = "<group>"; };
+		E7E9D2D81CB42DFF00898797 /* HTTPTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38657C2B3A43C6CE760D0385 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +78,6 @@
 		E7B4D30B1CAD81D400452DD6 /* JaShaMe */ = {
 			isa = PBXGroup;
 			children = (
-				E7B4D3241CAD8BFE00452DD6 /* ProgressView.swift */,
 				E7B4D30C1CAD81D400452DD6 /* AppDelegate.swift */,
 				E7B4D30E1CAD81D400452DD6 /* ViewController.swift */,
 				E7B4D3101CAD81D400452DD6 /* Main.storyboard */,
@@ -84,6 +86,7 @@
 				E7B4D31B1CAD81D400452DD6 /* Info.plist */,
 				E7B4D3131CAD81D400452DD6 /* JaShaMe.xcdatamodeld */,
 				E7B4D3281CAD918F00452DD6 /* RandomRestaurant.swift */,
+				E7E9D2D81CB42DFF00898797 /* HTTPTest.swift */,
 			);
 			path = JaShaMe;
 			sourceTree = "<group>";
@@ -91,6 +94,7 @@
 		F692D7E79C19A9356DF19357 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F7279A2EA280317D7215460 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,8 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E9D2D91CB42DFF00898797 /* HTTPTest.swift in Sources */,
 				E7B4D3151CAD81D400452DD6 /* JaShaMe.xcdatamodeld in Sources */,
-				E7B4D3251CAD8BFE00452DD6 /* ProgressView.swift in Sources */,
 				E7B4D30F1CAD81D400452DD6 /* ViewController.swift in Sources */,
 				E7B4D30D1CAD81D400452DD6 /* AppDelegate.swift in Sources */,
 				E7B4D3291CAD918F00452DD6 /* RandomRestaurant.swift in Sources */,
