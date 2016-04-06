@@ -4,7 +4,7 @@
 
 ### Technical Support
 
-iOS & Andorid
+iOS & Android 
 
 ### Data Source
 
@@ -21,3 +21,4 @@ iOS & Andorid
 	[Sample](https://dinbendon.net/do/idine?shop=226872)
 
 ####BK Studio X Hotdog's shop  Copyright 2016© All rights reserved.
+
