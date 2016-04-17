@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cqp-JE-bqU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -95,7 +96,7 @@
                         <outlet property="labelLatitude" destination="LTm-OJ-H4R" id="zVw-4j-VxJ"/>
                         <outlet property="labelLongitude" destination="7ix-qg-ikD" id="d5k-UK-wXY"/>
                         <outlet property="viewMap" destination="jM6-fS-nUu" id="FmE-Nb-Rcm"/>
-                        <segue destination="Uxd-Zl-y3x" kind="modal" identifier="AAA" id="3Qi-LQ-jyr"/>
+                        <segue destination="Uxd-Zl-y3x" kind="modal" identifier="RestaurantList" id="3Qi-LQ-jyr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,48 +115,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-y4-w4V">
-                                <rect key="frame" x="50" y="99" width="250" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6GP-mU-kdv">
+                                <rect key="frame" x="50" y="92" width="200" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HK-Qy-zEW">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="JD3-bO-rDc"/>
+                                            <constraint firstAttribute="width" constant="200" id="bFT-AM-HL9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-fu-swF">
+                                <rect key="frame" x="60" y="134" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EVf-xY-1Vb"/>
+                                    <constraint firstAttribute="width" constant="200" id="XQX-eX-DfZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-fu-swF">
-                                <rect key="frame" x="50" y="54" width="250" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aH-sL-iXg">
+                                <rect key="frame" x="-4" y="0.0" width="320" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8a-MZ-nDu">
+                                        <rect key="frame" x="15" y="5" width="46" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="modal" id="PSq-yi-aUl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-y4-w4V">
+                                <rect key="frame" x="60" y="175" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kur-yH-rPl"/>
+                                    <constraint firstAttribute="width" constant="200" id="USt-SY-G8Y"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yhF-fu-swF" firstAttribute="centerX" secondItem="OyZ-dK-PWa" secondAttribute="centerX" id="KuH-Cq-4CP"/>
+                            <constraint firstItem="yhF-fu-swF" firstAttribute="top" secondItem="3HK-Qy-zEW" secondAttribute="bottom" constant="21" id="Oll-6x-Dw5"/>
+                            <constraint firstItem="6aH-sL-iXg" firstAttribute="leading" secondItem="OyZ-dK-PWa" secondAttribute="leadingMargin" constant="-20" id="Vra-4N-z8B"/>
+                            <constraint firstItem="FLU-y4-w4V" firstAttribute="top" secondItem="yhF-fu-swF" secondAttribute="bottom" constant="20" id="Y64-rf-iEl"/>
+                            <constraint firstItem="3HK-Qy-zEW" firstAttribute="centerX" secondItem="OyZ-dK-PWa" secondAttribute="centerX" id="b4J-ZZ-aVH"/>
+                            <constraint firstItem="6aH-sL-iXg" firstAttribute="width" secondItem="OyZ-dK-PWa" secondAttribute="width" id="lB3-3Y-PUH"/>
+                            <constraint firstItem="6aH-sL-iXg" firstAttribute="top" secondItem="OyZ-dK-PWa" secondAttribute="top" id="lKa-x2-eMb"/>
+                            <constraint firstAttribute="bottom" secondItem="6aH-sL-iXg" secondAttribute="bottom" constant="528" id="pP4-Ey-uwY"/>
+                            <constraint firstItem="FLU-y4-w4V" firstAttribute="centerX" secondItem="OyZ-dK-PWa" secondAttribute="centerX" id="sPQ-Au-PNM"/>
+                            <constraint firstItem="3HK-Qy-zEW" firstAttribute="top" secondItem="6aH-sL-iXg" secondAttribute="bottom" constant="52" id="sjk-kB-x2D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oFH-54-JRJ"/>
                     <connections>
                         <outlet property="labelLatitude" destination="yhF-fu-swF" id="cfT-HO-CwB"/>
                         <outlet property="labelLongitude" destination="FLU-y4-w4V" id="2zq-cm-fQa"/>
+                        <outlet property="targetRestaurant" destination="3HK-Qy-zEW" id="8VX-83-mlD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsh-qJ-kPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510" y="321"/>
         </scene>
-        <!--Test-->
-        <scene sceneID="1x2-OS-Dhm">
+        <!--Home Page-->
+        <scene sceneID="SIl-ha-0Io">
             <objects>
-                <viewController id="dmA-Q7-0fu" customClass="HTTPTest" customModule="JaShaMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cqp-JE-bqU" customClass="HomePage" customModule="JaShaMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xcG-0i-MtG"/>
-                        <viewControllerLayoutGuide type="bottom" id="fQS-u0-LHJ"/>
+                        <viewControllerLayoutGuide type="top" id="GC6-26-CYx"/>
+                        <viewControllerLayoutGuide type="bottom" id="vf5-qg-MfF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4ho-8e-bDt">
+                    <view key="view" contentMode="scaleToFill" id="f9O-22-uPg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="gotoMain" id="Gez-mX-UPA"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FgH-MP-gri" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Utd-07-aUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="316"/>
+            <point key="canvasLocation" x="-346" y="321"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PSq-yi-aUl"/>
+    </inferredMetricsTieBreakers>
 </document>

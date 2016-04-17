@@ -8,6 +8,9 @@
 
 import UIKit
 import PKHUD
+import Alamofire
+import SwiftyJSON
+
 
 class ViewController: UIViewController {
     
@@ -15,7 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewMap: GMSMapView!
     @IBOutlet weak var labelLatitude: UILabel!
     @IBOutlet weak var labelLongitude: UILabel!
-
+    var restaurantJSON : AnyObject?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,30 +39,67 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showProgress(sender: UIButton) {
-        self.performSelector(#selector(ViewController.gotoRandomRestaurant), withObject: nil, afterDelay: 3)
-        
         self.labelLatitude.text = String(locationManager.location!.coordinate.latitude)
         self.labelLongitude.text = String(locationManager.location!.coordinate.longitude)
+        
+        Alamofire.request(.GET, "https://raw.githubusercontent.com/blackie1019/JaShaMe/master/SampleData/Dinbendon/Map.json").validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    self.restaurantJSON = response.result.value!
+                    // Debug Data
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                }
+            case .Failure(let error):
+                print(error)
+            }
+        }
+
         HUD.show(.Progress)
-    
+        
+        delay(3.0) {
+            self.gotoRandomRestaurant()
+            HUD.flash(.Success, delay: 0.5)
+        }
     }
     func gotoRandomRestaurant(){
-        HUD.hide()
-        let main = UIStoryboard(name: "Main", bundle: nil)
-//        let nextPage = main.instantiateViewControllerWithIdentifier("RandomRestaurant")
-//        
-//        (nextPage as! RandomRestaurant).Longitude = self.labelLongitude.text!
-//        (nextPage as! RandomRestaurant).Latitude = self.labelLatitude.text!
+        // Post URL to Get Restaurant
+        //https://dinbendon.net/do/shopXml?westLng=121.49353201574706&eastLng=121.52700598425292&northLat=25.051469874207516&southLat=25.037861748246463&zoom=15
+//        Alamofire.request(.GET, "https://raw.githubusercontent.com/blackie1019/JaShaMe/master/SampleData/Dinbendon/Map.json").validate().responseJSON { response in
+//            switch response.result {
+//            case .Success:
+//                if let value = response.result.value {
+//                    self.restaurantJSON = response.result.value!
+//                    // Debug Data
+//                    let json = JSON(value)
+//                    print("JSON: \(json)")
+//                }
+//            case .Failure(let error):
+//                print(error)
+//            }
+//        }
         
-        self.performSegueWithIdentifier("AAA", sender:main)
-//        self.presentViewController(nextPage  , animated: true, completion: nil)
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        self.performSegueWithIdentifier("RestaurantList", sender:main)
+
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "AAA"{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        
+        if segue.identifier == "RestaurantList"{
             let obj = segue.destinationViewController as! RandomRestaurant
-            obj.Latitude = self.labelLatitude.text!
-            obj.Longitude = self.labelLongitude.text!
+//            obj.Latitude = self.labelLatitude.text!
+//            obj.Longitude = self.labelLongitude.text!
+            obj.restaurantJSON = self.restaurantJSON
         }
+    }
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
 }
 
