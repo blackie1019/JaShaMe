@@ -17,6 +17,7 @@ class RandomRestaurant: UIViewController, NSURLSessionDelegate {
     
     var Latitude = String()
     var Longitude = String()
+    var RestautantDeatil = String()
     var restaurantJSON: AnyObject?
     
     override func viewDidLoad() {
@@ -41,9 +42,24 @@ class RandomRestaurant: UIViewController, NSURLSessionDelegate {
         targetRestaurant.text = restaurantList[randomIndex]
         labelLatitude.text = json["markers"]["marker"][randomIndex]["-lat"].stringValue
         labelLongitude.text = json["markers"]["marker"][randomIndex]["-lng"].stringValue
+        RestautantDeatil = json["markers"]["marker"][randomIndex]["infoWindow"].stringValue
 
-        
-//        labelLatitude.text = Latitude
-//        labelLongitude.text = Longitude
     }
+    
+    func gotoRestaurantDetail(){
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        self.performSegueWithIdentifier("RestaurantDetail", sender:main)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        
+        if segue.identifier == "RestaurantDetail"{
+            let obj = segue.destinationViewController as! RestaurantDetail
+            obj.Latitude = self.labelLatitude.text!
+            obj.Longitude = self.labelLongitude.text!
+            obj.RestaurantDetail = RestautantDeatil
+        }
+    }
+
 }

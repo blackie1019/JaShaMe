@@ -130,6 +130,16 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-y4-w4V">
+                                <rect key="frame" x="60" y="175" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kur-yH-rPl"/>
+                                    <constraint firstAttribute="width" constant="200" id="USt-SY-G8Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-fu-swF">
                                 <rect key="frame" x="60" y="134" width="200" height="21"/>
                                 <constraints>
@@ -153,16 +163,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-y4-w4V">
-                                <rect key="frame" x="60" y="175" width="200" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Kur-yH-rPl"/>
-                                    <constraint firstAttribute="width" constant="200" id="USt-SY-G8Y"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucW-M8-Jtc">
+                                <rect key="frame" x="136" y="389" width="40" height="30"/>
+                                <state key="normal" title="Detail"/>
+                                <connections>
+                                    <segue destination="bIn-oW-ZnX" kind="modal" identifier="RestaurantDetail" id="3h5-hg-bM2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -188,6 +195,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsh-qJ-kPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510" y="321"/>
+        </scene>
+        <!--Restaurant Detail-->
+        <scene sceneID="nNp-vK-USh">
+            <objects>
+                <viewController id="bIn-oW-ZnX" customClass="RestaurantDetail" customModule="JaShaMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSh-tB-TEI"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOx-DT-q8e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pzI-a7-5hp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYU-9d-TRB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGa-Xs-7b5" customClass="GMSMapView">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Kg7-a3-zG9"/>
+                                    <constraint firstAttribute="height" constant="128" id="PVT-42-Uii"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wYU-9d-TRB" firstAttribute="centerX" secondItem="pzI-a7-5hp" secondAttribute="centerX" id="QV5-Zh-oSS"/>
+                            <constraint firstItem="wYU-9d-TRB" firstAttribute="width" secondItem="pzI-a7-5hp" secondAttribute="width" id="bwS-Hq-kcx"/>
+                            <constraint firstItem="wYU-9d-TRB" firstAttribute="centerY" secondItem="pzI-a7-5hp" secondAttribute="centerY" id="gWq-an-phA"/>
+                            <constraint firstItem="KGa-Xs-7b5" firstAttribute="top" secondItem="wYU-9d-TRB" secondAttribute="bottom" constant="-348" id="hnb-4y-VAs"/>
+                            <constraint firstItem="wYU-9d-TRB" firstAttribute="height" secondItem="pzI-a7-5hp" secondAttribute="height" id="vdG-V5-I3M"/>
+                            <constraint firstItem="KGa-Xs-7b5" firstAttribute="centerX" secondItem="wYU-9d-TRB" secondAttribute="centerX" id="zuB-rY-Vcz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewMap" destination="KGa-Xs-7b5" id="BpH-La-55u"/>
+                        <outlet property="webVeiwDetail" destination="wYU-9d-TRB" id="Q5M-oI-iW4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRr-cv-BRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="321"/>
         </scene>
         <!--Home Page-->
         <scene sceneID="SIl-ha-0Io">

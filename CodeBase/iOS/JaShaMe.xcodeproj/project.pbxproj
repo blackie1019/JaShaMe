@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38657C2B3A43C6CE760D0385 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7279A2EA280317D7215460 /* Pods.framework */; };
+		E74E4F4A1CC5464F0082143A /* RestaurantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E4F491CC5464F0082143A /* RestaurantDetail.swift */; };
 		E78C87391CBA3115001A9B24 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78C87381CBA3115001A9B24 /* HomePage.swift */; };
 		E7B4D30D1CAD81D400452DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4D30C1CAD81D400452DD6 /* AppDelegate.swift */; };
 		E7B4D30F1CAD81D400452DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4D30E1CAD81D400452DD6 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		11A4A0A1B88A48974DFD7A0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4F7279A2EA280317D7215460 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3137A0FB58ABB6F40EC76E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E74E4F491CC5464F0082143A /* RestaurantDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetail.swift; sourceTree = "<group>"; };
 		E78C87381CBA3115001A9B24 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		E7B4D3091CAD81D400452DD6 /* JaShaMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JaShaMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B4D30C1CAD81D400452DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				E7B4D30C1CAD81D400452DD6 /* AppDelegate.swift */,
 				E7B4D30E1CAD81D400452DD6 /* ViewController.swift */,
 				E7B4D3101CAD81D400452DD6 /* Main.storyboard */,
+				E74E4F491CC5464F0082143A /* RestaurantDetail.swift */,
 				E7B4D3161CAD81D400452DD6 /* Assets.xcassets */,
 				E7B4D3181CAD81D400452DD6 /* LaunchScreen.storyboard */,
 				E7B4D31B1CAD81D400452DD6 /* Info.plist */,
@@ -225,6 +228,7 @@
 				E7B4D3151CAD81D400452DD6 /* JaShaMe.xcdatamodeld in Sources */,
 				E7B4D30F1CAD81D400452DD6 /* ViewController.swift in Sources */,
 				E7B4D30D1CAD81D400452DD6 /* AppDelegate.swift in Sources */,
+				E74E4F4A1CC5464F0082143A /* RestaurantDetail.swift in Sources */,
 				E78C87391CBA3115001A9B24 /* HomePage.swift in Sources */,
 				E7B4D3291CAD918F00452DD6 /* RandomRestaurant.swift in Sources */,
 			);
